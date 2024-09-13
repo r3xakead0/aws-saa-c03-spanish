@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación AWS SAA-C03</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación AWS SAA-C03</h1>
+        
+        <form id="quiz-form">
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <h2>1. Una empresa tiene una aplicación que se ejecuta en un gran tipo de instancia de Amazon EC2 de propósito general que forma parte de un grupo EC2 Auto Scaling. La compañía quiere reducir costos futuros asociados a esta aplicación. Después de que la compañía revisa las métricas y los registros en Amazon CloudWatch, la compañía nota que esta aplicación se ejecuta aleatoriamente un par de veces al día para recuperar y administrar datos. Según CloudWatch, el tiempo de ejecución máximo para cada solicitud es de 10 minutos, el uso de memoria es de 4 GB y las instancias siempre están en estado de ejecución. ¿Qué solución reducirá los costos MÁS? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Implementar la aplicación en una instancia EC2 de gran tamaño con ráfagas </label>
+                    <label><input type="radio" name="q1" value="B"> B. Refactorizar el código de la aplicación para que se ejecute como una función de AWS Lambda </label>
+                    <label><input type="radio" name="q1" value="C"> C. Containerizar la aplicación mediante Amazon Elastic Kubernetes Service (EKS). Alojar el contenedor en instancias EC2.</label>
+                    <label><input type="radio" name="q1" value="D"> D. Utilice AWS Instance Scheduler para iniciar y detener las instancias en función de los tiempos de ejecución de los registros.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <h2>2. Una empresa de eventos en línea ejecuta una aplicación de venta de boletos electrónicos para conciertos de música en vivo. La demanda es impredecible y puede ser particularmente alta para los artistas populares. ¿Cuál sería la forma más óptima de alojar el contenido estático para la aplicación web frond-end? El sitio es rico en archivos de audio y video de actuaciones.</h2>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. Utilizar un sistema de archivos de Amazon EFS, con instancias EC2 de uso general.</label>
+                    <label><input type="radio" name="q2" value="B"> B. Utilizar un volumen de Amazon EBS, con instancias EC2 de uso general.</label>
+                    <label><input type="radio" name="q2" value="C"> C. Colocar una distribución de Amazon CloudFront frente a un bucket de Amazon S3.</label>
+                    <label><input type="radio" name="q2" value="D"> D. Almacenar los archivos en una tabla de Amazon DynamoDB como objetos binarios. Recupere archivos de la tabla con Amazon API Gateway y AWS Lambda.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <h2>3. Una compañía de medios está diseñando una nueva solución para renderizado gráfico. La aplicación requiere hasta 400 GB de almacenamiento para datos temporales que se descartan después de renderizar las tramas. La aplicación requiere aproximadamente 40,000 IOPS aleatorias para realizar el renderizado. ¿Cuál es la opción de almacenamiento MÁS rentable para esta aplicación de renderizado?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. Una instancia de Amazon EC2 optimizada para almacenamiento con almacenamiento de instancias. </label>
+                    <label><input type="radio" name="q3" value="B"> B. Una instancia de Amazon EC2 optimizada para almacenamiento con un volumen de Amazon Elastic Block Store (EBS) de SSD de IOPS aprovisionadas (io1 o io2).</label>
+                    <label><input type="radio" name="q3" value="C"> C. Una instancia de Amazon EC2 con ráfagas con un volumen de Amazon Elastic Block Store (EBS) de disco duro optimizado para rendimiento (st1).</label>
+                    <label><input type="radio" name="q3" value="D"> D. Una instancia de Amazon EC2 en ráfaga con almacenamiento Amazon S3 a través de un endpoint de VPC.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <h2>4. Un arquitecto de soluciones está trabajando para optimizar una aplicación de administración de documentos heredada que se ejecuta en varios servidores Microsoft Windows en un centro de datos local. La aplicación accede a una gran cantidad de archivos en un recurso compartido de archivos de red que se está quedando sin espacio. El director de información quiere migrar el almacenamiento local a AWS, pero aún así debe ser capaz de soportar la aplicación heredada. ¿Qué debe hacer el arquitecto de soluciones para cumplir con estos requisitos?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Utilizar una puerta de enlace de almacenamiento de AWS y la opción de Amazon S3 File Gateway</label>
+                    <label><input type="radio" name="q4" value="B"> B. Usar Amazon Elastic File System (Amazon EFS)</label>
+                    <label><input type="radio" name="q4" value="C"> C. Utilizar AWS Storage Gateway y la opción de gateway de volumen. </label>
+                    <label><input type="radio" name="q4" value="D"> D. Utilizar un volumen de Amazon Elastic Block Store (Amazon EBS).</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <h2>5. Una empresa ha decidido utilizar AWS para lograr una alta disponibilidad. La arquitectura de la compañía consiste en un balanceador de carga de aplicaciones frente a un grupo de Auto Scaling que consta de instancias de Amazon EC2. La compañía utiliza métricas y alarmas de Amazon CloudWatch para monitorear la arquitectura. Un arquitecto de soluciones se da cuenta de que la compañía no es capaz de lanzar algunas instancias. El arquitecto de soluciones encuentra el siguiente mensaje: CUOTA EC2 EXCEDIDA. ¿Cómo puede el arquitecto de soluciones garantizar que la compañía pueda lanzar todas las instancias EC2 correctamente?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Modificar el grupo Auto Scaling para aumentar el número máximo de instancias que la compañía puede lanzar.</label>
+                    <label><input type="radio" name="q5" value="B"> B. Utilizar las cuotas de servicio para solicitar un aumento del número de instancias EC2 que la compañía puede lanzar. </label>
+                    <label><input type="radio" name="q5" value="C"> C. Volver a crear el grupo Auto Scaling para asegurarse que el grupo Auto Scaling esté conectado al balanceador de carga de aplicaciones.</label>
+                    <label><input type="radio" name="q5" value="D"> D. Modificar la métrica de CloudWatch que la compañía monitorea para lanzar las instancias.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question">
+                <h2>6. Una empresa espera que la base de usuarios de su aplicación de compras en el hogar aumente a 3 veces el nivel actual en 1 año. La compañía aloja la aplicación en una región de AWS. La compañía utiliza una instancia de base de datos de Amazon RDS para MySQL, un balanceador de carga de aplicaciones y Amazon Elastic Container Service (Amazon ECS) para alojar el sitio web, el contenido estático y los microservicios. Un arquitecto de soluciones debe recomendar cambios de diseño para apoyar el crecimiento esperado y reducir la sobrecarga operativa. ¿Qué cambios de diseño cumplen con estos requisitos? SELECCIONAR DOS </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q6" value="A"> A. Mover archivos estáticos de Amazon ECS a Amazon S3.</label>
+                    <label><input type="checkbox" name="q6" value="B"> B. Utilizar una política de enrutamiento de geolocalización de Amazon Route 53.</label>
+                    <label><input type="checkbox" name="q6" value="C"> C. Escalar el tamaño de la instancia de base de datos RDS según la supervisión de registros de AWS CloudTrail.</label>
+                    <label><input type="checkbox" name="q6" value="D"> D. Crear una segunda instancia de base de datos RDS en otra región. Dividir la carga entre las dos instancias de base de datos.</label>
+                    <label><input type="checkbox" name="q6" value="E"> E. Escalar el tamaño de la instancia de base de datos RDS según el monitoreo de RDS Performance Insights.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="question">
+                <h2>7. Una empresa de seguros está migrando su solicitud de procesamiento de reclamos a AWS. Están explorando formas en las que sus analistas de negocios pueden ejecutar consultas en millones de reclamos y mostrar gráficos en paneles de inteligencia empresarial (BI). ¿Qué servicios recomendarías para lograrlo con el menor esfuerzo administrativo?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Configurar una réplica de lectura de base de datos de Amazon RDS para los datos de reclamaciones y cree paneles de Amazon CloudWatch para los empleados.</label>
+                    <label><input type="radio" name="q7" value="B"> B. Crear un lago de datos con Amazon S3 y permita a los analistas acceder a Amazon Athena para consultar datos de reclamaciones.</label>
+                    <label><input type="radio" name="q7" value="C"> C. Crear una aplicación React personalizada y aloje archivos web en un bucket de Amazon S3. Consultar datos de reclamaciones en una réplica de lectura de base de datos de Amazon RDS mediante bibliotecas JS.</label>
+                    <label><input type="radio" name="q7" value="D"> D. Alojar datos de reclamaciones en Amazon Redshift y proporcione a los analistas acceso a paneles en Amazon QuickSight.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="question">
+                <h2>8. Una aplicación que se ejecuta en su instancia de Amazon EC2 en una VPC requiere acceso de solo lectura a los archivos almacenados en un bucket de Amazon S3. ¿Cuáles son las dos acciones necesarias para implementar esto de manera segura? SELECCIONAR 2 </h2>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Crear una función de AWS IAM con solo los permisos necesarios necesarios en los objetos del bucket de Amazon S3.</label>
+                    <label><input type="radio" name="q8" value="B"> B. Crear un grupo de seguridad de VPC para permitir el acceso de la instancia de Amazon EC2 al endpoint de Amazon S3. Adjunte el grupo de seguridad a la instancia EC2.</label>
+                    <label><input type="radio" name="q8" value="C"> C. Almacenar el ID de clave de acceso de AWS y la clave de acceso secreta para el rol de AWS IAM en /secure/aws_credencials.config.</label>
+                    <label><input type="radio" name="q8" value="D"> D. Adjuntar la función de AWS IAM a la instancia de Amazon EC2.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 9 -->
+            <div class="question">
+                <h2>9. Una tienda de mascotas en línea tiene un sistema crítico de vacunación para mascotas que actualmente se ejecuta en una sola instancia EC2. Se le ha pedido que ponga la solución altamente disponible con el menor esfuerzo administrativo. ¿Qué pasos recomendarías? SELECCIONAR 3</h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q9" value="A"> A. Crear una imagen de máquina de Amazon (AMI). Crear una plantilla de lanzamiento usando la AMI. </label>
+                    <label><input type="checkbox" name="q9" value="B"> B. Crear una plantilla de lanzamiento y haga referencia a la instancia de Amazon EC2 en ejecución.</label>
+                    <label><input type="checkbox" name="q9" value="C"> C. Crear una función Lambda para agregar/eliminar instancias EC2 a/de un grupo objetivo de equilibradores de carga. Activar el Lambda usando métricas de CloudWatch.</label>
+                    <label><input type="checkbox" name="q9" value="D"> D. Crear un grupo EC2 Auto-Scaling usando la plantilla de lanzamiento. Adjuntar el grupo a un equilibrador de carga.</label>
+                    <label><input type="checkbox" name="q9" value="E"> E. Asegurar que el equilibrador de carga y el grupo EC2 Auto-Scaling estén configurados con subredes de varias zonas de disponibilidad.</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 10 -->
+            <div class="question">
+                <h2>10. Una empresa edu-tech almacena documentos de examen de estudiantes terminados en un cubo de Amazon S3. La compañía ha adoptado una estrategia basada en la nube y está experimentando un crecimiento significativo. Su producto también ha sido lanzado en múltiples países. Deben apegarse a las regulaciones locales que les exigen almacenar los escaneos durante 6 años, pero se requiere eliminarlos posteriormente ya que los datos se consideran sensibles. ¿Qué característica de Amazon S3 les permitirá lograr esto?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Amazon S3 Glacier Deep Archive </label>
+                    <label><input type="radio" name="q10" value="B"> B. Amazon S3 Intelligent-Tiering </label>
+                    <label><input type="radio" name="q10" value="C"> C. Amazon S3 Object Lock </label>
+                    <label><input type="radio" name="q10" value="D"> D. Amazon S3 Lifecycle </label>
+                    <label><input type="radio" name="q10" value="E"> E. Amazon S3 Versioning </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 11 -->
+            <div class="question">
+                <h2>11. Una startup de AI/ML está buscando un servicio de AWS para almacenar metadatos simples y estructurados en imágenes recopiladas utilizando una base de datos especialmente diseñada. Su aplicación utiliza actualmente una base de datos MongoDB autogestionada. El CTO ha ordenado que todas las implementaciones de AWS no tengan servidor, y se ha reservado tiempo de desarrollo para reelaborar cualquier API según sea necesario. ¿Qué servicio de AWS recomendarías?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A. Almacenar metadatos en un clúster de Amazon DocumentDB como objetos JSON. </label>
+                    <label><input type="radio" name="q11" value="B"> B. Almacenar metadatos en una tabla de Amazon DynamoDB. Volver a trabajar los campos en los tipos de datos de valor clave compatibles. </label>
+                    <label><input type="radio" name="q11" value="C"> C. Implementar Amazon ElastiCache para Redis para almacenar metadatos. </label>
+                    <label><input type="radio" name="q11" value="D"> D. Almacenar los archivos de metadatos JSON en un bucket de Amazon S3 junto con las imágenes. Usar Amazon Athena para leer los datos. </label>
+                    <label><input type="radio" name="q11" value="E"> E. Instalar un metastore Apache Hive en una instancia de Amazon EC2. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 12 -->
+            <div class="question">
+                <h2>12. Un desarrollador almacenó un archivo de configuración de aplicación importante en /app, pero el archivo ya no existe después de reiniciar la instancia de Linux de Amazon EC2. ¿Qué declaraciones describen posibles razones de su desaparición? SELECCIONAR 3 </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q12" value="A"> A. Se utilizó el sistema de archivos que reside en un almacén de instancias de Amazon EC2. Las tiendas de instancias son efímeras. </label>
+                    <label><input type="checkbox" name="q12" value="B"> B. Se utilizó un sistema de archivos que reside en un volumen de Amazon EBS. Los volúmenes de EBS son efímeros. </label>
+                    <label><input type="checkbox" name="q12" value="C"> C. El archivo se almacenó en un sistema de archivos de Amazon EFS. Es posible que el sistema de archivos no se haya vuelto a montar después de reiniciar la instancia EC2. </label>
+                    <label><input type="checkbox" name="q12" value="D"> D. El archivo se almacenó en un sistema de archivos de Amazon EFS. Es posible que otra instancia de EC2 haya eliminado el archivo durante el reinicio. </label>
+                    <label><input type="checkbox" name="q12" value="E"> E. El agente de AWS Systems Manager en la instancia de Amazon EC2 identificó el archivo como malware y lo eliminó automáticamente. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 13 -->
+            <div class="question">
+                <h2>13. Una clínica de mascotas quiere utilizar Amazon Rekognition para identificar de inmediato al animal detectado en una foto proporcionada por su cliente, para que la cita se pueda hacer con el veterinario adecuado. ¿Cuál será la solución más sencilla?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A. Solicitar a los clientes que carguen una foto usando el Protocolo de transferencia segura de archivos (SFTP), a una instancia EC2 equipada con volúmenes de Elastic Block Store (EBS). Implementar una aplicación personalizada en la instancia EC2 que utiliza la API de Rekognition. </label>
+                    <label><input type="radio" name="q13" value="B"> B. Solicitar a los clientes que carguen una foto a un bucket S3 usando una URL prefirmada. Cree una notificación de evento en el bucket que active una función Lambda al subir. La función Lambda ejecutará la API de Rekognition. </label>
+                    <label><input type="radio" name="q13" value="C"> C. Pedir al cliente que envíe la foto por correo electrónico como archivo adjunto y use Simple Email Service (SES) para almacenar el archivo en un bucket S3. Programar una función Lambda para que se ejecute cada hora, usando CloudWatch Events. La función Lambda ejecutará la API de Rekognition. </label>
+                    <label><input type="radio" name="q13" value="D"> D. Solicitar a los clientes que carguen una foto a un bucket S3 usando una URL prefirmada. Implementar una aplicación personalizada en la instancia EC2 que sondea el bucket S3 y utiliza la API de Rekognition si se ha detectado una carga. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 14 -->
+            <div class="question">
+                <h2>14. Trabajas para el CIO de una compañía de seguros de automóviles. Recientemente, sus competidores han informado que fueron sometidos a ataques de inyección SQL por parte de actores maliciosos. Al CIO le gustaría proteger su infraestructura de amenazas similares. Sus servidores web se ejecutan detrás de un balanceador de carga de aplicaciones (ALB). ¿Qué recomendarías? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A. Habilitar AWS Shield Advanced y supervise las métricas de CloudWatch. </label>
+                    <label><input type="radio" name="q14" value="B"> B. Configurar AWS GuardDuty y filtre los hallazgos de compromiso de SQL. </label>
+                    <label><input type="radio" name="q14" value="C"> C. Buscar sentencias SQL sospechosas en los registros de ALB CloudWatch. </label>
+                    <label><input type="radio" name="q14" value="D"> D. Habilitar AWS WAF en su ALB. Configure una condición de coincidencia de inyección SQL. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 15 -->
+            <div class="question">
+                <h2>15. El equipo de ingeniería de aplicaciones ha adoptado una estrategia de solo servidor. Se ha solicitado al equipo de seguridad empresarial que evite el uso de instancias EC2 solo en las cuentas de AWS de los equipos de aplicaciones. Sin embargo, los desarrolladores de aplicaciones deben seguir siendo administradores de sus cuentas de AWS. ¿Qué enfoque recomendarías? SELECCIONAR 2 </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q15" value="A"> A. Configurar organizaciones de AWS. Colocar las cuentas de AWS utilizadas por el equipo de aplicación en la Unidad Organizacional (OU) "App". </label>
+                    <label><input type="checkbox" name="q15" value="B"> B. Crear un grupo de IAM" AppAdmins". Hacer que todos los desarrolladores de aplicaciones sean miembros de este grupo de IAM.</label>
+                    <label><input type="checkbox" name="q15" value="C"> C. Aplicar una Política de Control de Seguridad (SCP) que deniegue los permisos de EC2 en la OU "App".</label>
+                    <label><input type="checkbox" name="q15" value="D"> D. Aplicar una política que deniegue los permisos de EC2 al grupo de IAM "AppAdmins".</label>
+                </div>
+            </div>
+
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
