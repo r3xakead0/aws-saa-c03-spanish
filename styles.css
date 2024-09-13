@@ -47,7 +47,9 @@ button:hover {
 .message {
     margin-top: 20px;
     font-size: 16px;
-    color: #d9534f; /* Color rojo para los mensajes de error */
+}
+.message.incorrect {
+    color: #d9534f; /* Azul claro para mensajes correctos */
 }
 .message.correct {
     color: #008000; /* Color azul para los mensajes de éxito */
