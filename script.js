@@ -17,7 +17,33 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
         q12: ['A', 'C', 'D'],
         q13: 'B', 
         q14: 'D', 
-        q15: ['A', 'C']
+        q15: ['A', 'C'], 
+        q16: ['A', 'E'], 
+        q17: 'C', 
+        q18: 'A', 
+        q19: 'A', 
+        q20: 'C', 
+        q21: 'B', 
+        q22: 'D', 
+        q23: 'C', 
+        q24: 'D', 
+        q25: 'C', 
+        q26: 'C', 
+        q27: ['B', 'E'], 
+        q28: 'B', 
+        q29: 'D', 
+        q30: 'B', 
+        q31: ['B', 'D'], 
+        q32: 'A', 
+        q33: 'C', 
+        q34: 'B', 
+        q35: 'D', 
+        q36: 'D', 
+        q37: 'D', 
+        q38: 'D', 
+        q39: 'A', 
+        q40: ['C', 'D'],  
+        q41: 'C'
     };
 
     const validateAnswer = (name, correctAnswer, isMultipleChoice) => {
@@ -134,6 +160,188 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
         message += '<p class="message correct">Pregunta 15: ¡Respuesta correcta!</p>';
     } else {
         message += '<p class="message incorrect">Pregunta 15: Respuesta incorrecta. Los atributos correctos son  ' + JSON.stringify(correctAnswers.q15) + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 16
+    if (validateAnswer('q16', correctAnswers.q16, true)) {
+        message += '<p class="message correct">Pregunta 16: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 16: Respuesta incorrecta. Los atributos correctos son  ' + JSON.stringify(correctAnswers.q16) + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 17
+    if (validateAnswer('q17', correctAnswers.q17, false)) {
+        message += '<p class="message correct">Pregunta 17: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 17: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q17 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 18
+    if (validateAnswer('q18', correctAnswers.q18, false)) {
+        message += '<p class="message correct">Pregunta 18: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 18: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q18 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 19
+    if (validateAnswer('q19', correctAnswers.q19, false)) {
+        message += '<p class="message correct">Pregunta 19: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 19: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q19 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 20
+    if (validateAnswer('q20', correctAnswers.q20, false)) {
+        message += '<p class="message correct">Pregunta 20: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 20: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q20 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 21
+    if (validateAnswer('q21', correctAnswers.q21, false)) {
+        message += '<p class="message correct">Pregunta 21: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 21: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q21 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 22
+    if (validateAnswer('q22', correctAnswers.q22, false)) {
+        message += '<p class="message correct">Pregunta 22: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 22: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q22 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 23
+    if (validateAnswer('q23', correctAnswers.q23, false)) {
+        message += '<p class="message correct">Pregunta 23: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 23: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q23 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 24
+    if (validateAnswer('q24', correctAnswers.q24, false)) {
+        message += '<p class="message correct">Pregunta 24: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 24: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q24 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 25
+    if (validateAnswer('q25', correctAnswers.q25, false)) {
+        message += '<p class="message correct">Pregunta 25: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 25: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q25 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 26
+    if (validateAnswer('q26', correctAnswers.q26, false)) {
+        message += '<p class="message correct">Pregunta 26: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 26: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q26 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 27
+    if (validateAnswer('q27', correctAnswers.q27, true)) {
+        message += '<p class="message correct">Pregunta 27: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 27: Respuesta incorrecta. Los atributos correctos son  ' + JSON.stringify(correctAnswers.q27) + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 28
+    if (validateAnswer('q28', correctAnswers.q28, false)) {
+        message += '<p class="message correct">Pregunta 28: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 28: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q28 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 29
+    if (validateAnswer('q29', correctAnswers.q29, false)) {
+        message += '<p class="message correct">Pregunta 29: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 29: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q29 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 30
+    if (validateAnswer('q30', correctAnswers.q30, false)) {
+        message += '<p class="message correct">Pregunta 30: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 30: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q30 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 31
+    if (validateAnswer('q31', correctAnswers.q31, true)) {
+        message += '<p class="message correct">Pregunta 31: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 31: Respuesta incorrecta. Los atributos correctos son  ' + JSON.stringify(correctAnswers.q31) + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 32
+    if (validateAnswer('q32', correctAnswers.q32, false)) {
+        message += '<p class="message correct">Pregunta 32: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 32: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q32 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 33
+    if (validateAnswer('q33', correctAnswers.q33, false)) {
+        message += '<p class="message correct">Pregunta 33: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 33: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q33 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 34
+    if (validateAnswer('q34', correctAnswers.q34, false)) {
+        message += '<p class="message correct">Pregunta 34: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 34: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q34 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 35
+    if (validateAnswer('q35', correctAnswers.q35, false)) {
+        message += '<p class="message correct">Pregunta 35: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 35: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q35 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 36
+    if (validateAnswer('q36', correctAnswers.q36, false)) {
+        message += '<p class="message correct">Pregunta 36: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 36: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q36 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 37
+    if (validateAnswer('q37', correctAnswers.q37, false)) {
+        message += '<p class="message correct">Pregunta 37: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 37: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q37 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 38
+    if (validateAnswer('q38', correctAnswers.q38, false)) {
+        message += '<p class="message correct">Pregunta 38: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 38: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q38 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 39
+    if (validateAnswer('q39', correctAnswers.q39, false)) {
+        message += '<p class="message correct">Pregunta 39: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 39: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q39 + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 40
+    if (validateAnswer('q40', correctAnswers.q40, true)) {
+        message += '<p class="message correct">Pregunta 40: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 40: Respuesta incorrecta. Los atributos correctos son  ' + JSON.stringify(correctAnswers.q40) + '.</p>';
+    }
+
+    // Validación de la respuesta para la Pregunta 41
+    if (validateAnswer('q41', correctAnswers.q41, false)) {
+        message += '<p class="message correct">Pregunta 41: ¡Respuesta correcta!</p>';
+    } else {
+        message += '<p class="message incorrect">Pregunta 41: Respuesta incorrecta. La respuesta correcta es  ' + correctAnswers.q41 + '.</p>';
     }
 
     document.getElementById('message').innerHTML = message;

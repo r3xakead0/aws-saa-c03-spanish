@@ -181,6 +181,323 @@
                 </div>
             </div>
 
+            <!-- Pregunta 16 -->
+            <div class="question">
+                <h2>16. Una empresa está diseñando una aplicación crítica para el negocio en AWS y quiere asegurarse de que siga los principios de diseño del pilar de fiabilidad del AWS Well-Architected Framework. ¿Cuál de las siguientes opciones NO es un principio de diseño para la fiabilidad? (Selecciona DOS) </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q16" value="A"> A. Realizar cambios frecuentes, pequeños y reversibles </label>
+                    <label><input type="checkbox" name="q16" value="B"> B. Probar procedimientos de recuperación </label>
+                    <label><input type="checkbox" name="q16" value="C"> C. Recuperarse automáticamente de fallos </label>
+                    <label><input type="checkbox" name="q16" value="D"> D. Escalar horizontalmente para aumentar la disponibilidad del sistema </label>
+                    <label><input type="checkbox" name="q16" value="E"> E. Realizar operaciones como código </label>
+                </div>
+            </div>
+            
+            <!-- Pregunta 17 -->
+            <div class="question">
+                <h2>17. ¿Cuál de los pilares de Framework tiene como uno de sus principios de diseño "Experimentar con más frecuencia"? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A. Optimización de costos </label>
+                    <label><input type="radio" name="q17" value="B"> B. Sostenibilidad </label>
+                    <label><input type="radio" name="q17" value="C"> C. Eficiencia en el rendimiento </label>
+                    <label><input type="radio" name="q17" value="D"> D. Fiabilidad </label>
+                    <label><input type="radio" name="q17" value="D"> E. Seguridad </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 18 -->
+            <div class="question">
+                <h2>18. Una empresa necesita mantener registros de acceso por un mínimo de 5 años debido a los requisitos regulatorios. Rara vez se accede a los datos una vez almacenados, pero deben ser accesibles con un día (24 horas) de anticipación si es necesario. ¿Cuál es la solución de almacenamiento de datos MÁS rentable que cumple con estos requisitos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A. Almacenar los datos en el almacenamiento de Amazon S3 Glacier Deep Archive y eliminar los objetos después de 5 años utilizando una regla de ciclo de vida. </label>
+                    <label><input type="radio" name="q18" value="B"> B. Almacenar los datos en el almacenamiento estándar de Amazon S3 y realizar la transición a Amazon S3 Glacier después de 30 días utilizando una regla de ciclo de vida. </label>
+                    <label><input type="radio" name="q18" value="C"> C. Almacenar los datos en registros con Amazon CloudWatch Logs y establecer el período de retención en 5 años. </label>
+                    <label><input type="radio" name="q18" value="D"> D. Almacenar los datos en el almacenamiento de Amazon S3 Standard-Infrequent Access (S3 Standard-IA) y eliminar los objetos después de 5 años utilizando una regla de ciclo de vida. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 19 -->
+            <div class="question">
+                <h2>19. Una empresa utiliza instancias reservadas para ejecutar su carga de trabajo de procesamiento de datos. El trabajo nocturno suele tardar 7 horas en ejecutarse y debe terminar dentro de un plazo de 10 horas. La compañía anticipa incrementos temporales en la demanda al final de cada mes que provocarán que el trabajo supere el límite de tiempo con la capacidad de los recursos actuales. Una vez iniciado, el trabajo de procesamiento no se puede interrumpir antes de su finalización. La compañía quiere implementar una solución que le permita brindar mayor capacidad de la manera más rentable posible. ¿Qué debe hacer un arquitecto de soluciones para lograr esto? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A. Implementar instancias bajo demanda durante periodos de alta demanda. </label>
+                    <label><input type="radio" name="q19" value="B"> B. Crear una segunda reserva de Amazon EC2 para instancias adicionales. </label>
+                    <label><input type="radio" name="q19" value="C"> C. Implementar instancias Spot durante periodos de alta demanda. </label>
+                    <label><input type="radio" name="q19" value="D"> D. Aumentar el tamaño de instancia de las instancias en la reserva de Amazon EC2 para soportar el aumento de la carga de trabajo. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 20 -->
+            <div class="question">
+                <h2>20. Un arquitecto de soluciones quiere diseñar una solución para ahorrar costos para las instancias de Amazon EC2 que no necesitan ejecutarse durante un cierre de la empresa de 2 semanas. Las aplicaciones que se ejecutan en las instancias EC2 almacenan datos en la memoria de las instancias, estos datos deben estar presentes cuando las instancias reanuden la operación. ¿Qué enfoque debería recomendar el arquitecto de soluciones para apagar y reanudar las instancias EC2? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A. Modificar la aplicación para almacenar los datos en volúmenes de almacén de instancias. Volver a conectar los volúmenes mientras los reinicia. </label>
+                    <label><input type="radio" name="q20" value="B"> B. Generar una instantánea de las instancias EC2 antes de detenerlas. Restaurar la instantánea después de reiniciar las instancias. </label>
+                    <label><input type="radio" name="q20" value="C"> C. Ejecutar las aplicaciones en instancias EC2 habilitadas para hibernación. Hibernar las instancias antes del cierre de la compañía de 2 semanas. </label>
+                    <label><input type="radio" name="q20" value="D"> D. Tener en cuenta la zona de disponibilidad para cada instancia EC2 antes de detenerla. Reiniciar las instancias en las mismas zonas de disponibilidad después del cierre de la compañía de 2 semanas. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 21 -->
+            <div class="question">
+                <h2>21. Una empresa tiene muchas aplicaciones en instancias de Amazon EC2 ejecutándose en grupos de Auto Scaling. La política de la compañía requiere que se conserven los datos de los volúmenes de Amazon Elastic Block Store (Amazon EBS) adjuntos. ¿Qué acción cumplirá con estos requisitos sin afectar el rendimiento? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> A. Habilitar la protección de terminación en las instancias de Amazon EC2. </label>
+                    <label><input type="radio" name="q21" value="B"> B. Deshabilitar el atributo deleteOnTermination para los volúmenes de Amazon EBS. </label>
+                    <label><input type="radio" name="q21" value="C"> C. Utilizar los datos de usuario de Amazon EC2 para configurar un trabajo de sincronización para los datos de volumen raíz. </label>
+                    <label><input type="radio" name="q21" value="D"> D. Cambiar la comprobación de estado de Auto Scaling para que apunte a una fuente en el volumen raíz. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 22 -->
+            <div class="question">
+                <h2>20. Una empresa tiene una aplicación local que exporta archivos de registro sobre los usuarios de un sitio web. Estos archivos de registro varían de 20 GB a 30 GB de tamaño. Un arquitecto de soluciones ha creado un bucket de Amazon S3 para almacenar estos archivos. Los archivos se subirán directamente desde la aplicación. La conexión de red experimenta fallas intermitentes y la carga a veces falla. Un arquitecto de soluciones debe diseñar una solución que resuelva este problema. La solución debe minimizar la sobrecarga operativa. ¿Qué solución cumplirá con estos requisitos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> A. Copiar los archivos en una instancia de Amazon EC2 en la región de AWS más cercana. Utilizar las políticas del ciclo de vida de S3 para copiar los archivos de registro en Amazon S3. </label>
+                    <label><input type="radio" name="q22" value="B"> B. Habilitar S3 Transfer Acceleration para manejar las exportaciones de archivos. </label>
+                    <label><input type="radio" name="q22" value="C"> C. Cargar los archivos a dos regiones de AWS simultáneamente. Habilitar la replicación bidireccional entre regiones entre las dos regiones. </label>
+                    <label><input type="radio" name="q22" value="D"> D. Utilizar la carga multiparte a S3 para manejar las exportaciones de archivos. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 23 -->
+            <div class="question">
+                <h2>23. Una empresa está implementando una nueva base de datos en una nueva instancia de Amazon EC2. La carga de trabajo de esta base de datos requiere un solo volumen de Amazon Elastic Block Store (Amazon EBS) que pueda admitir hasta 20,000 IOPS. ¿Qué tipo de volumen de EBS cumple con este requisito? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> A. HDD optimizado para rendimiento </label>
+                    <label><input type="radio" name="q23" value="B"> B. SSD de propósito general </label>
+                    <label><input type="radio" name="q23" value="C"> C. SSD de IOPS aprovisionadas </label>
+                    <label><input type="radio" name="q23" value="D"> D. HDD en Frío </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 24 -->
+            <div class="question">
+                <h2>24. Una empresa está desarrollando una aplicación de chat que se implementará en AWS. La aplicación almacena los mensajes mediante el uso de un modelo de datos clave-valor. Los grupos de usuarios suelen leer los mensajes varias veces. Un arquitecto de soluciones debe seleccionar una solución de base de datos que escalará para una alta tasa de lecturas y entregará mensajes con latencia de microsegundos. ¿Qué solución de base de datos cumplirá con estos requisitos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> A. Implementar Amazon Neptune con Amazon Elasticache para Memcached. </label>
+                    <label><input type="radio" name="q24" value="B"> B. Implementar Amazon Aurora con Amazon ElastiCache para Memcached. </label>
+                    <label><input type="radio" name="q24" value="C"> C. Implementar Amazon Aurora con. Aurora Réplicas para manejar pares de llaves. </label>
+                    <label><input type="radio" name="q24" value="D"> D. implementar Amazon DynamoDB con DynamoDB Accelerator (DAX). </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 25 -->
+            <div class="question">
+                <h2>25. Una compañía le pide a un arquitecto de soluciones que implemente una estrategia piloto de recuperación ante desastres (DR) para una aplicación local existente. La aplicación es autónoma y no necesita acceder a ninguna base de datos. ¿Qué solución implementará una estrategia de DR con luz piloto? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> A. Volver a crear el entorno de alojamiento de aplicaciones en AWS mediante instancias de Amazon EC2. Dirigir el 10% del tráfico de aplicaciones a las instancias EC2 que se ejecutan en la nube de AWS. Cuando la aplicación local falla, dirigir el 100% del tráfico de aplicaciones a las instancias EC2 que se ejecutan en la nube de AWS. </label>
+                    <label><input type="radio" name="q25" value="B"> B. Realizar una copia de seguridad de la aplicación, la configuración y los datos locales en un bucket de Amazon S3. Cuando la aplicación local falla, crear un nuevo entorno de alojamiento en AWS y restaurar la aplicación a partir de la información almacenada en el bucket de S3. </label>
+                    <label><input type="radio" name="q25" value="C"> C. Volver a crear el entorno de alojamiento de aplicaciones en AWS mediante instancias de Amazon EC2 y detener las instancias EC2. Cuando la aplicación local falla, iniciar las instancias EC2 detenidas y dirigir el 100% del tráfico de aplicaciones a las instancias EC2 que se ejecutan en la nube de AWS. </label>
+                    <label><input type="radio" name="q25" value="D"> D. Realizar una copia de seguridad de la aplicación, la configuración y los datos locales en un bucket de Amazon S3. Cuando la aplicación local falla, reconstruir el entorno de alojamiento local y restaurar la aplicación a partir de la información almacenada en el bucket de S3. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 26 -->
+            <div class="question">
+                <h2>26. Una compañía planea implementar una nueva aplicación en la nube de AWS. La aplicación lee y escribe información en una base de datos. La compañía implementará la aplicación en dos regiones de AWS diferentes, y cada aplicación escribirá en una base de datos de su región. Las bases de datos en las dos regiones necesitan mantener los datos sincronizados con una latencia mínima. Las bases de datos deben ser eventualmente consistentes. En caso de conflicto de datos, las consultas deben devolver la escritura más reciente. ¿Cuál solución cumplirá estos requisitos con el MENOR trabajo administrativo? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> A. Utilizar Amazon Athena con los datos almacenados en los buckets de Amazon S3 en ambas regiones. Utilizar la replicación entre regiones de S3 entre los dos buckets de S3. </label>
+                    <label><input type="radio" name="q26" value="B"> B. Utilizar la captura de datos de cambio (CDC) de AWS Database Migration Service (AWS DMS) entre un clúster de base de datos de Amazon RDS para MySQL en cada región. </label>
+                    <label><input type="radio" name="q26" value="C"> C. Utilizar Amazon DynamoDB. Configurar la tabla como una tabla global. </label>
+                    <label><input type="radio" name="q26" value="D"> D. Utilizar un clúster de base de datos de Amazon RDS para PostResQL con una réplica de lectura entre regiones. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 27 -->
+            <div class="question">
+                <h2>27. Una empresa tiene una arquitectura de aplicaciones de dos niveles que se ejecuta en subredes públicas y privadas. Las instancias de Amazon EC2 que ejecutan la aplicación web están en la subred pública y una instancia EC2 para la base de datos se ejecuta en la subred privada. Las instancias de aplicaciones web y la base de datos se ejecutan en una sola Zona de Disponibilidad (AZ). ¿Qué combinación de pasos debe tomar un arquitecto de soluciones para proporcionar alta disponibilidad para esta arquitectura? (Seleccione DOS.) </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q27" value="A"> A. Crear nuevas subredes públicas y privadas en la misma AZ. </label>
+                    <label><input type="checkbox" name="q27" value="B"> B. Crear un grupo de Amazon EC2 Auto Scaling y Application Load Balancer que abarque varias AZ para las instancias de aplicaciones web. </label>
+                    <label><input type="checkbox" name="q27" value="C"> C. Agregar las instancias de aplicaciones web existentes a un grupo de Auto Scaling detrás de un balanceador de carga de aplicaciones. </label>
+                    <label><input type="checkbox" name="q27" value="D"> D. Crear nuevas subredes públicas y privadas en una nueva AZ. Crear una base de datos usando una instancia EC2 en la subred pública en la nueva AZ. Migrar el contenido de la base de datos antigua a la nueva base de datos. </label>
+                    <label><input type="checkbox" name="q27" value="E"> E. Crear nuevas subredes públicas y privadas en la misma VPC, cada una en una nueva AZ. Crear una instancia de base de datos Multi-AZ de Amazon RDS en las subredes privadas. Migrar el contenido de la base de datos antigua a la nueva instancia de base de datos. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 28 -->
+            <div class="question">
+                <h2>28. Una empresa está creando una aplicación web de tres capas que consiste en un servidor web, un servidor de aplicaciones y un servidor de base de datos. La aplicación rastreará las coordenadas GPS de los paquetes a medida que se están entregando. La aplicación actualizará la base de datos cada 0.5 segundos. El seguimiento deberá leerse lo más rápido posible para que los usuarios puedan verificar el estado de sus paquetes. Solo algunos paquetes podrían ser rastreados en algunos días, mientras que millones de paquetes podrían ser rastreados en otros días. El seguimiento deberá buscarse mediante ID de seguimiento, ID de cliente e ID de pedido. Los pedidos de más de 1 mes ya no necesitan ser rastreados. ¿Qué debería recomendar un arquitecto de soluciones para lograr esto con un costo total de propiedad mínimo? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> A. Utilizar Amazon DynamoDB. Active Auto Scaling para la tabla DynamoDB. Programe un script de eliminación automática para elementos de más de 1 mes. </label>
+                    <label><input type="radio" name="q28" value="B"> B. Utilizar Amazon DynamoDB con índices secundarios globales. Activar Auto Scaling para la tabla DynamoDB y los índices secundarios globales. Activar TTL para la tabla DynamoDB. </label>
+                    <label><input type="radio" name="q28" value="C"> C. Utilizar una instancia bajo demanda de Amazon RDS con IOPS aprovisionadas. Configurar las alarmas de Amazon CloudWatch para enviar notificaciones cuando se excedan las IOPS. Incrementar y disminuir las IOPS según sea necesario. </label>
+                    <label><input type="radio" name="q28" value="D"> D. Utilizar una instancia reservada de Amazon RDS con IOPS aprovisionadas. Configurar las alarmas de Amazon CloudWatch para enviar notificaciones cuando se excedan las IOPS. Incrementar y disminuir las IOPS según sea necesario. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 29 -->
+            <div class="question">
+                <h2>29. Una aplicación de generación de informes se ejecuta en instancias de Amazon EC2 detrás de un balanceador de carga de aplicaciones. Las instancias se ejecutan en un grupo de Amazon EC2 Auto Scaling en varias zonas de disponibilidad. Para informes complejos, la aplicación puede tardar hasta 15 minutos en responder a una solicitud. A un arquitecto de soluciones le preocupa que los usuarios reciban errores HTTP 5xx si una solicitud de informe está en proceso durante un evento de escalado. ¿Qué debe hacer el arquitecto de soluciones para garantizar que las solicitudes de los usuarios se completen antes de que se terminen las instancias? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q29" value="A"> A. Habilite sesiones adhesivas (afinidad de sesión) para el grupo objetivo de las instancias. </label>
+                    <label><input type="radio" name="q29" value="B"> B. Aumentar el tamaño de la instancia en el grupo de destino Application Load Balancer </label>
+                    <label><input type="radio" name="q29" value="C"> C. Aumenta el periodo de tiempo de reutilización para el grupo Auto Scaling a una cantidad de tiempo mayor que el tiempo requerido para las respuestas de mayor duración. </label>
+                    <label><input type="radio" name="q29" value="D"> D. Aumente el tiempo de espera de retraso de cancelación del registro para el grupo objetivo de las instancias a más de 900 segundos. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 30 -->
+            <div class="question">
+                <h2>30. Una empresa aloja una popular aplicación web para conocer más sobre diversos tipos de deportes. La aplicación web se conecta a una base de datos de Amazon RDS para MySQL que se ejecuta en una subred privada de VPC. Los servidores web deben ser accesibles solo para clientes en una conexión SSL. El servidor de base de datos debe ser accesible solo desde los servidores web. ¿Cómo debe un arquitecto de soluciones diseñar una solución que cumpla con los requisitos sin afectar a las aplicaciones en ejecución? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q30" value="A"> A. Crear una ACL de red en la subred del servidor web y permita HTTPS entrante y MySQL saliente. Poner tanto la base de datos como los servidores web en la misma subred. </label>
+                    <label><input type="radio" name="q30" value="B"> B. Abrir un puerto HTTPS en el grupo de seguridad para servidores web y establezca el origen en 0.0.0.0/0. Abra el puerto MySQL en el grupo de seguridad de la base de datos y adjúntelo a la instancia MySQL. Establecer el origen en el grupo de seguridad del servidor web. </label>
+                    <label><input type="radio" name="q30" value="C"> C. Crear una ACL de red en la subred del servidor web; permita HTTPS entrante y especificar la fuente como 0.0.0.0/0. Crear una ACL de red en una subred de base de datos, permita el puerto MySQL entrante para servidores web y denegar todo el tráfico saliente. </label>
+                    <label><input type="radio" name="q30" value="D"> D. Abrir el puerto MySQL en el grupo de seguridad para servidores web y establecer la fuente en 0.0.0.0/0. Abra el puerto HTTPS en el grupo de seguridad de la base de datos y adjúntelo a la instancia MySQL. Establecer el origen en el grupo de seguridad del servidor web. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 31 -->
+            <div class="question">
+                <h2> 
+                    31. Un arquitecto de soluciones necesita permitir a los desarrolladores tener conectividad SSH a servidores web. Los requisitos son los siguientes: <br>
+                    <ul>
+                    <li>Limitar el acceso a los usuarios que se originan en la red corporativa.</li>
+                    <li>Los servidores web no pueden tener acceso SSH directamente desde internet.</li>
+                    <li>Los servidores web residen en una subred privada</li>
+                    </ul>
+                    ¿Qué combinación de pasos debe completar el arquitecto para cumplir con estos requisitos? (Seleccione DOS.)
+                </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q31" value="A"> A. Crear un host bastión que autentica a los usuarios contra el directorio corporativo. </label>
+                    <label><input type="checkbox" name="q31" value="B"> B. Crear un host bastión con reglas de grupo de seguridad que solo permitan el tráfico de la red corporativa. </label>
+                    <label><input type="checkbox" name="q31" value="C"> C. Adjuntar un rol de IAM al host del bastión con permisos relevantes. </label>
+                    <label><input type="checkbox" name="q31" value="D"> D. Configurar el grupo de seguridad de los servidores web para permitir el tráfico SSH desde un host bastión. </label>
+                    <label><input type="checkbox" name="q31" value="E"> E. Denegar todo el tráfico SSH de la red corporativa en la ACL de la red entrante. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 32 -->
+            <div class="question">
+                <h2>32. Una empresa está implementando una nueva aplicación que consistirá en una capa de aplicaciones y una base de datos relacional de procesamiento de transacciones en línea (OLTP). La aplicación debe estar disponible en todo momento. No obstante, la aplicación tendrá periodos de inactividad. La compañía quiere pagar el mínimo por costos de cómputos durante estos periodos de inactividad. ¿Qué solución cumple con estos requisitos de manera más rentable? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q32" value="A"> A. Ejecutar la aplicación en contenedores con Amazon Elastic Container Service (ECS) en AWS Fargate. Utilizar Amazon Aurora Serverless para la base de datos. </label>
+                    <label><input type="radio" name="q32" value="B"> B. Implementar la aplicación y una base de datos MySQL en instancias de Amazon EC2 mediante AWS CloudFormation. Eliminar la pila al comienzo de los periodos de inactividad. </label>
+                    <label><input type="radio" name="q32" value="C"> C. Implementar la aplicación en instancias de Amazon EC2 en un grupo de Auto Scaling detrás de un balanceador de carga de aplicaciones. Utilizar Amazon RDS para MySQL para la base de datos. </label>
+                    <label><input type="radio" name="q32" value="D"> D. Ejecutar la aplicación en instancias de Amazon EC2 mediante un tipo de instancia de ráfaga. Utilizar Amazon Redshift para la base de datos. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 33 -->
+            <div class="question">
+                <h2>33. Una aplicación lanzada en instancias de Amazon EC2 necesita publicar información de identificación personal (PII) sobre los clientes que utilizan Amazon Simple Notification Service (Amazon SNS). La aplicación se inicia en subredes privadas dentro de una Amazon VPC. ¿Cuál es la forma MÁS segura de permitir que la aplicación acceda a puntos finales de servicio en la misma región de AWS? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q33" value="A"> A. Utilizar una puerta de enlace a Internet. </label>
+                    <label><input type="radio" name="q33" value="B"> B. Usar una puerta de enlace NAT </label>
+                    <label><input type="radio" name="q33" value="C"> C. UtilizarAWS PrivateLink. </label>
+                    <label><input type="radio" name="q33" value="D"> D. Utilizar una instancia de proxy. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 34 -->
+            <div class="question">
+                <h2>34. Un arquitecto de soluciones está diseñando una VPC que requiere acceso a un servidor API remoto mediante IPv6. No se debe acceder a los recursos dentro de la VPC directamente desde internet. ¿Cómo se debe lograr esto? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q34" value="A"> A. Utilizar una puerta de enlace NAT y denegar el acceso público mediante grupos de seguridad. </label>
+                    <label><input type="radio" name="q34" value="B"> B. Adjuntar una puerta de enlace de Internet solo para egresos y actualizar las tablas de enrutamiento. </label>
+                    <label><input type="radio" name="q34" value="C"> C. Utilizar una puerta de enlace NAT y actualizar las tablas de enrutamiento. </label>
+                    <label><input type="radio" name="q34" value="D"> D. Adjuntar una puerta de enlace de Internet y denegar el acceso público mediante grupos de seguridad. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 35 -->
+            <div class="question">
+                <h2>35. Una empresa está experimentando problemas con su aplicación de procesamiento de mensajes. Durante periodos de alta demanda, la aplicación se sobrecarga. La aplicación se basa en un diseño monolítico y está alojada en un centro de datos local. La compañía quiere trasladar la aplicación a la nube de AWS y desacoplar la arquitectura monolítica. Un arquitecto de soluciones debe diseñar una solución que permita a los componentes de trabajo de la aplicación acceder a los mensajes y manejar el volumen máximo. ¿Qué solución cumple con estos requisitos con el rendimiento MÁS ALTO? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q35" value="A"> A. Utilizar un balanceador de carga de red con grupos de destino configurados para realizar el enrutamiento basado en rutas a instancias de Amazon EC2. </label>
+                    <label><input type="radio" name="q35" value="B"> B. Utilizar las colas FIFO de Amazon Simple Queue Service (Amazon SQS) en combinación con instancias de Amazon EC2 escaladas por un grupo de Auto Scaling. </label>
+                    <label><input type="radio" name="q35" value="C"> C. Utilizar un balanceador de carga de aplicaciones con grupos de destino configurados para realizar enrutamiento basado en rutas a instancias de Amazon EC2. </label>
+                    <label><input type="radio" name="q35" value="D"> D. Utilizar colas estándar de Amazon Simple Queue Service (Amazon SQS) en combinación con instancias de Amazon EC2 escaladas por un grupo de Auto Scaling. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 36 -->
+            <div class="question">
+                <h2>
+                    36. Un administrador quiere aplicar una política basada en recursos al bucket de S3 llamada "iam-policy-testbucket" para restringir el acceso y permitir que cuentas escriban solo objetos en el bucket. Cuando el administrador intenta aplicar la siguiente política al bucket "iam-policy-testbucket", el bucket de S3 presenta un error.<br>
+                    <code>
+                        {
+                            "Version": "2012-10-17",
+                            "Id": "Policy1646946718956", 
+                            "Statement":[
+                            {
+                                "Sid": "Stmt1646946717210", 
+                                "Effect": "Allow",
+                                "Action": "s3:PutObject",
+                                "Resource": "arn:aws:s3:::iam-policy-testbucket/*"
+                            }
+                            ]
+                        }
+                    </code>
+                    ¿Cómo puede el administrador corregir la política para resolver el error y aplicarla correctamente?
+                </h2>
+                <div class="options">
+                    <label><input type="radio" name="q36" value="A"> A. Cambiar el elemento Action de s3:PutObject a S3: * </label>
+                    <label><input type="radio" name="q36" value="B"> B. Eliminar el elemento Resource porque no es necesario para las políticas basadas en recursos. </label>
+                    <label><input type="radio" name="q36" value="C"> C. Cambiar el elemento Resource a NotResource. </label>
+                    <label><input type="radio" name="q36" value="D"> D. Agregar un elemento Principal a la política para declarar qué cuentas tienen acceso. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 37 -->
+            <div class="question">
+                <h2>37. Una aplicación que se ejecuta en una subred privada accede a una tabla de Amazon DynamoDB. Los datos no pueden salir de la red de AWS para cumplir con los requisitos de seguridad. ¿Cómo se debe cumplir este requisito? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q37" value="A"> A. Configurar una ACL de red en DynamoDB para limitar el tráfico a la subred privada. </label>
+                    <label><input type="radio" name="q37" value="B"> B. Habilitar el cifrado de DynamoDB en reposo utilizando una clave de AWS Key Management Service (AWS KMS). </label>
+                    <label><input type="radio" name="q37" value="C"> C. Agregar una puerta de enlace NAT y configurar la tabla de rutas en la subred privada. </label>
+                    <label><input type="radio" name="q37" value="D"> D. Configurar un punto final de VPC para DynamoDB y configurar la política del punto final. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 38 -->
+            <div class="question">
+                <h2>38. Una empresa ejecuta su sitio web en instancias de Amazon EC2 detrás de un balanceador de carga de aplicaciones configurado como origen para una distribución de Amazon CloudFront. La compañía quiere protegerse contra secuencias de comandos entre sitios y ataques de inyección SQL. ¿Qué enfoque debería recomendar un arquitecto de soluciones para cumplir con estos requisitos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q38" value="A"> A. Habilitar AWS Shield Advanced. Enumerar la distribución de Cloud Front como un recurso protegido. </label>
+                    <label><input type="radio" name="q38" value="B"> B. Definir una política de AWS Shield Advanced en AWS Firewall Manager para bloquear los ataques de secuencias de comandos entre sitios y de inyección SQL. </label>
+                    <label><input type="radio" name="q38" value="C"> C. Implementar AWS Firewall Manager en las instancias EC2. Crear condiciones y reglas que bloqueen secuencias de comandos entre sitios y ataques de inyección SQL. </label>
+                    <label><input type="radio" name="q38" value="D"> D. Configurar AWS WAF en la distribución de CloudFront. Utilizar condiciones y reglas que bloqueen secuencias de comandos entre sitios y ataques de inyección SQL. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 39 -->
+            <div class="question">
+                <h2>39. Una empresa que procesa imágenes de satélite tiene una aplicación que se ejecuta en AWS. La compañía almacena las imágenes en un bucket de Amazon S3. Por razones de cumplimiento, la empresa debe replicar todos los datos una vez al mes en una ubicación local. La cantidad promedio de datos que la empresa necesita transferir es de 60 TB. ¿Cuál es la forma MÁS rentable de transferir estos datos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q39" value="A"> A. Exportar los datos mensualmente desde el bucket $3 existente a un dispositivo AWS Snowball Edge Storage Optimized. Enviar el dispositivo a la ubicación local. Transferir los datos. Devolver el dispositivo una semana después. </label>
+                    <label><input type="radio" name="q39" value="B"> B. Utilizar la replicación de bucket 53 para copiar todos los objetos en un nuevo bucket $3 que utilice almacenamiento S3 Standard-Infrequent Access (S3 Standard-IA). Utilizar una puerta de enlace de archivos de AWS Storage Gateway para transferir los datos del nuevo bucket S3 a la ubicación local. Eliminar las imágenes del nuevo bucket S3 después de la transferencia de los datos. </label>
+                    <label><input type="radio" name="q39" value="C"> C. Utilizar la replicación de bucket S3 para copiar todos los objetos en un nuevo bucket S3 que utilice almacenamiento S3 Standard-Infrequent Access (S3 Standard-IA). Utilizar Amazon S3 para transferir los datos del nuevo bucket $3 a la ubicación local. Eliminar las imágenes del nuevo bucket S3 después de la transferencia de los datos. </label>
+                    <label><input type="radio" name="q39" value="D"> D. Crear una distribución de Amazon CloudFront para los objetos del bucket S3 existente. Descargar los objetos de CloudFront a la ubicación local todos los meses. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 40 -->
+            <div class="question">
+                <h2>40. Una empresa quiere construir una infraestructura inmutable para sus aplicaciones de software utilizadas para hacer reservas de hotel. La compañía quiere probar las aplicaciones de software antes de enviarles tráfico. La compañía busca una solución eficiente que limite los efectos de los errores de aplicación. ¿Qué combinación de pasos debería recomendar un arquitecto de soluciones? (Seleccione DOS.) </h2>
+                <div class="options">
+                    <label><input type="checkbox" name="q40" value="A"> A. Utilizar AWS CloudFormation para actualizar la infraestructura de producción y hacer retroceder la pila si la actualización falla. </label>
+                    <label><input type="checkbox" name="q40" value="B"> B. Aplicar el enrutamiento de conmutación por error de Amazon Route 53 para probar el entorno de ensayo y la conmutación por error al entorno de producción si las pruebas pasan. </label>
+                    <label><input type="checkbox" name="q40" value="C"> C. Aplicar el enrutamiento ponderado Amazon Route 53 para probar el entorno de ensayo y aumentar gradualmente el tráfico a medida que pasan las pruebas. </label>
+                    <label><input type="checkbox" name="q40" value="D"> D. Utilizar AWS CloudFormation con un conjunto de parámetros para el valor de ensayo en un entorno independiente que no sea el entorno de producción. </label>
+                    <label><input type="checkbox" name="q40" value="E"> E. Utilizar AWS CloudFormation para implementar el entorno de ensayo con una política de eliminación de instantáneas y reutilizar los recursos en el entorno de producción si las pruebas pasan. </label>
+                </div>
+            </div>
+
+            <!-- Pregunta 41 -->
+            <div class="question">
+                <h2>41. Una empresa utiliza una cuenta de AWS para ejecutar cargas de trabajo de producción. La compañía tiene una cuenta de AWS separada para su equipo de ingeniería de seguridad. Durante las auditorías periódicas, el equipo de ingeniería de seguridad necesita ver configuraciones de cuentas específicas y configuraciones de recursos en la cuenta de AWS que ejecuta cargas de trabajo de producción. Un arquitecto de soluciones debe proporcionar al equipo de ingeniería de seguridad los permisos de acceso requeridos mediante el diseño de una solución que siga las mejores prácticas de seguridad prescritas de AWS. ¿Qué solución cumplirá con estos requisitos? </h2>
+                <div class="options">
+                    <label><input type="radio" name="q41" value="A"> A. Crear un usuario de IAM para cada miembro del equipo de seguridad en la cuenta de producción. Adjunte una política de permisos que proporcione los permisos requeridos por el equipo de ingeniería de seguridad a cada usuario. </label>
+                    <label><input type="radio" name="q41" value="B"> B. Crear un usuario de IAM para cada miembro del equipo de ingeniería de seguridad en la cuenta de producción. Adjunte una política de permisos que proporcione los permisos requeridos por el equipo de ingeniería de seguridad a un nuevo grupo de IAM. Asignar miembros de ingeniería de seguridad al grupo </label>
+                    <label><input type="radio" name="q41" value="C"> C. Crear un rol de IAM en la cuenta de producción. Adjuntar una política de permisos que proporcione los permisos requeridos por el equipo de ingeniería de seguridad. Agregar la cuenta del equipo de ingeniería de seguridad a la política de confianza. </label>
+                    <label><input type="radio" name="q41" value="D"> D. Crear un nuevo usuario de IAM en la cuenta de producción. Asignar privilegios administrativos al usuario. Permita que el equipo de ingeniería de seguridad use esta cuenta para iniciar sesión en los sistemas a los que se necesita acceder. </label>
+                </div>
+            </div>
+
+
             <button type="submit">Enviar Respuestas</button>
         </form>
 
